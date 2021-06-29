@@ -1,0 +1,8 @@
+<!--Component/search_input/search_input.wxml-->
+<!-- 搜索框 -->
+<view class="search_input">
+    <navigator url="/pages/select/select" class="search_nav">
+        <image class="icon" mode="widthFix" src="/images/zoom3.png"></image>
+        <view>输入车牌号,单号,货号等</view>
+    </navigator>
+</view>

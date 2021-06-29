@@ -1,0 +1,23 @@
+<!--pages/statistics_pages/goods_Statistics/index.wxml-->
+<view class="table">
+ <view class="tr bg-w">
+ <view class="th">车牌号</view>
+ <view class="th">品牌</view>
+ <view class="th ">类型</view>
+ <view class="th ">核载(吨)</view>
+ </view>
+ <block wx:for="{{listData}}" wx:key="id">
+ <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+ <view class="td">{{item.carNum}}</view>
+ <view class="td">{{item.carGrand}}</view>
+ <view class="td">{{item.carType}}</view>
+ <view class="td">{{item.tonnage}}</view>
+ </view>
+ <view class="tr" wx:else>
+ <view class="td">{{item.carNum}}</view>
+ <view class="td">{{item.carGrand}}</view>
+ <view class="td">{{item.carType}}</view>
+ <view class="td">{{item.tonnage}}</view>
+ </view>
+ </block>
+</view>

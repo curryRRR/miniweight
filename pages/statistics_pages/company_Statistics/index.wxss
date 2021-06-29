@@ -1,0 +1,32 @@
+/* pages/statistics_pages/goods_Statistics/index.wxss */
+.table {
+    border: 0px solid darkgray;
+   }
+   .tr {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 3rem;
+    align-items: center;
+   }
+   .td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+   }
+   .bg-w{
+    background: snow;
+   }
+   .bg-g{
+    background: #E6F3F9;
+   }
+   .th {
+    width: 40%;
+    justify-content: center;
+    background: #1296db;
+    color: #fff;
+    display: flex;
+    height: 3rem;
+    align-items: center;
+    font-size: 30rpx;
+   }

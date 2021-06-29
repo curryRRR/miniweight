@@ -1,0 +1,89 @@
+/* pages/user/user.wxss */
+page{
+    background-color: #efefef;
+}
+
+.user_info_warp{
+    height: 45vh;
+    overflow: hidden;
+}
+
+.user_image_warp{
+    position: relative;
+}
+
+.user_image_warp .login_btn{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 200rpx;
+    width: 130rpx;
+    height: 90rpx;
+    background-color: #fff;
+    text-align: center;
+    font-size: 38rpx;
+    border: 1px solid yellowgreen;
+    color: yellowgreen;
+    border-radius: 20rpx;
+    padding: 20rpx;
+}
+
+.user_image_warp .user_bg{
+    height: 46vh;
+    filter: blur(10rpx);  /*css3的滤镜效果 高斯模糊*/
+}
+
+.user_image_warp .user_info{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30%;
+    text-align: center;
+
+}
+
+.user_info .user_icon{
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+}
+
+.user_info .user_name{
+    color: #fff;
+    margin-top: 40rpx;
+    font-size: 30rpx;
+}
+
+
+
+.station_info{
+    padding-left: 20rpx;
+    border-left: 15rpx solid orangered;
+    margin-top: 50rpx;
+    font-weight: bold;
+}
+
+
+.setting_menu{
+    width: 95%;
+    margin: 0rpx auto;
+    margin-top: 50rpx;
+    font-size: 30rpx;
+    color: black;
+}
+
+.setting_menu .setting_item{
+    height: 100rpx;
+    padding: 0 30rpx;
+    line-height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    margin: 10rpx auto;
+    border-radius: 10rpx;
+}
+
+.setting_menu .setting_item image{
+    width: 30rpx;
+    /* text-align: center; */
+}

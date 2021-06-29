@@ -1,0 +1,50 @@
+<!--pages/user/user.wxml-->
+
+  <!-- 头像昵称信息 -->
+  <view class="user_info_warp">
+    <view class="user_image_warp">
+        <block wx:if="{{userInfo.nickName}}"> 
+            <image class="user_bg" src="{{userInfo.avatarUrl}}"></image>
+            <view class="user_info">
+                <image class="user_icon" src="{{userInfo.avatarUrl}}"></image>
+                <view class="user_name">{{userInfo.nickName}}</view>
+            </view>
+        </block>
+        <block wx:else>
+            <navigator class="login_btn" url="/pages/login/login">登录</navigator>
+        </block>
+    </view>
+</view>
+
+<view class="setting_menu">
+        <view class="setting_item">
+            <view>我的昵称</view>
+            <block wx:if="{{userInfo.nickName}}">
+                <view><image mode="widthFix" src="/images/next.png"></image></view>
+            </block>
+            <block wx:else>
+                <view class="login" bindtap="handleLogin" style="color:var(--themeColor)">立即登录</view>
+            </block>
+        </view>
+        <view class="setting_item">
+            <view>我的角色</view>
+            <block wx:if="{{userInfo.nickName}}">
+                <view><image mode="widthFix" src="/images/next.png"></image></view>
+            </block>
+            <block wx:else>
+                <view class="login"  bindtap="handleLogin" style="color:var(--themeColor)">立即登录</view>
+            </block>
+        </view>
+        <view class="setting_item">
+            <view>设置</view>
+            <view><image mode="widthFix" src="/images/next.png"></image></view>
+        </view>
+        <view class="setting_item">
+            <view>关于</view>
+            <view><image mode="widthFix" src="/images/next.png"></image></view>
+        </view>
+        <navigator open-type="exit" target="miniProgram" class="setting_item setting_first"
+        hover-class="navigator-hover">
+            <view>退出小程序</view>
+        </navigator>
+</view>

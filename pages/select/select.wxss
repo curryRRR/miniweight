@@ -1,0 +1,74 @@
+/* pages/select/select.wxss */
+page{
+    background-color: #efefef;
+    padding: 15rpx;
+}
+
+.search_warp{
+    width: 95%;
+    display: flex;
+    height: 80rpx;
+    margin: 10rpx auto;
+}
+
+.search_warp input{
+    flex: 1;
+    height: 100%;
+    font-size: 30rpx;
+    background-color: #fff;
+    padding-left: 20rpx;
+
+}
+
+.search_warp button{
+    font-weight: normal;
+    height: 100%;
+    padding: 0;
+    margin: 0 10rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 查询到的数据数量 */
+.dataCount{
+    text-align: center;
+    color: #1296db;
+}
+
+/* 数据项 */
+.info_item{
+    width: 90%;
+    height: 310rpx;
+    margin: 10rpx auto 30rpx auto;
+    background-color: #fff;
+    color: #999;
+}
+
+.info_item .item_title{
+    height: 20%;
+    margin: 0 20rpx;
+    line-height: 60rpx;
+    font-size: 30rpx;
+}
+
+.info_item .item_body view{
+    margin: 10rpx 15rpx;
+}
+
+.info_txt{
+    margin-left: 50rpx;
+    color: #000;
+}
+
+.item_detail{
+    margin-bottom: 10rpx;
+    color: #000;
+}
+
+.topImg{
+    position: fixed;
+    bottom: 100rpx;
+    right: 50rpx;
+    width: 100rpx;
+}

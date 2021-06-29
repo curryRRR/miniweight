@@ -1,0 +1,22 @@
+/**
+    在小程序样式中 不支持通配符 '*'
+**/
+
+page,view,text,swiper,swiper-item,image,navigator{
+    /*清除一些默认样式*/
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+page{
+    /*将主题色通过变量来存放，用的时候直接用变量*/
+    --themeColor:#1296db; 
+    font-size: 28rpx;
+}
+
+image{
+    width: 100%;
+}
+
+

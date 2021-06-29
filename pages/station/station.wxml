@@ -1,0 +1,87 @@
+<!--pages/station/station.wxml-->
+<view class="setting_menu">
+    <!-- 站点信息 -->
+        <view class="station_info station_title">站点信息</view>
+        <view class="setting_item">
+            <view>当前站点</view>
+            <block wx:if="{{userInfo.nickName}}">
+                <view><image mode="widthFix" src="/images/next.png"></image></view>
+            </block>
+            <block wx:else>
+                <view class="login" bindtap="handleLogin" style="color:var(--themeColor)">立即登录</view>
+            </block>
+            
+        </view>
+        <view class="setting_item">
+            <view>到期时间</view>
+            <block wx:if="{{userInfo.nickName}}">
+                <view><image mode="widthFix" src="/images/next.png"></image></view>
+            </block>
+            <block wx:else>
+                <view class="login"  bindtap="handleLogin" style="color:var(--themeColor)">立即登录</view>
+            </block>
+        </view>
+        <view class="setting_item">
+            <view>站点详情</view>
+            <view><image mode="widthFix" src="/images/next.png"></image></view>
+        </view>
+        <view class="setting_item" bindtap="handleBindQR">
+            <view>站点二维码</view>
+            <view><image mode="widthFix" src="/images/next.png"></image></view>
+        </view>
+        <view class="QRcode" hidden="{{isClick}}" z-index="2">假装是二维码
+            <canvas class="canvas-code"canvas-id="myQrcode" style="background:#fff;width: 250px;height: 250px;"/>
+        </view>
+ 
+
+        <!-- 站点设置 -->
+        <view class="station_info station_title">站点设置</view>
+        <view class="setting_item" bindtap="scanCodeEvent">
+            <view>注册站点</view>
+            <view><image mode="widthFix" src="/images/next.png"></image></view>
+        </view>
+        <view class="setting_item">
+            <view>切换站点</view>
+            <view><image mode="widthFix" src="/images/next.png"></image></view>
+        </view>
+        <view class="setting_item">
+            <view>绑定站点</view>
+            <view><image mode="widthFix" src="/images/next.png"></image></view>
+        </view>
+        <view class="setting_item">
+            <view>人员管理</view>
+            <view><image mode="widthFix" src="/images/next.png"></image></view>
+        </view>
+
+                <!-- 预置维护 -->
+        <view class="station_info station_title">预置维护</view>
+        <view class="setting_item">
+            <view>车辆管理</view>
+            <view><image mode="widthFix" src="/images/next.png"></image></view>
+        </view>
+        <view class="setting_item">
+            <view>货品管理</view>
+            <view><image mode="widthFix" src="/images/next.png"></image></view>
+        </view>
+        <view class="setting_item">
+            <view>单位管理</view>
+            <view><image mode="widthFix" src="/images/next.png"></image></view>
+        </view>
+        <view class="setting_item">
+            <view>规格管理</view>
+            <view><image mode="widthFix" src="/images/next.png"></image></view>
+        </view>
+
+        <!-- 运行日志 -->
+        <view class="station_info station_title">运行日志</view>
+        <view class="setting_item" bindtap="test">
+            <view>称重信息</view>
+            <view><image mode="widthFix" src="/images/next.png"></image></view>
+        </view>
+        <view class="setting_item">
+            <view>称重日志</view>
+            <view><image mode="widthFix" src="/images/next.png"></image></view>
+        </view>
+
+        
+</view>

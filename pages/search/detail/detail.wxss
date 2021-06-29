@@ -1,0 +1,20 @@
+/* pages/search/detail/detail.wxss */
+
+.body{
+    margin-top: 50rpx;
+    margin-left: 100rpx;
+    font-size: 30rpx;
+    color: #888;
+}
+
+.weightItem{
+    margin: 20rpx 50rpx;
+}
+
+.content{
+    margin-left: 20rpx;
+    color: black;
+}
+
+
+

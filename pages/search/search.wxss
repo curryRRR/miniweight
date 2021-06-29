@@ -1,0 +1,64 @@
+/* pages/search/search.wxss */
+page{
+    background-color: #efefef;
+}
+
+.data_warp .count_warp{
+    display: flex;
+}
+
+.count_info{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.count_name{
+    color: #999;
+}
+
+
+
+.data_info image{
+    margin-top: 30rpx;
+    width: 50%;
+}
+
+
+/* 数据项 */
+.info_item{
+    width: 90%;
+    height: 310rpx;
+    margin: 10rpx auto 30rpx auto;
+    background-color: #fff;
+    color: #999;
+}
+
+.info_item .item_title{
+    height: 20%;
+    margin: 0 20rpx;
+    line-height: 60rpx;
+    font-size: 30rpx;
+}
+
+.info_item .item_body view{
+    margin: 10rpx 15rpx;
+}
+
+.info_txt{
+    margin-left: 50rpx;
+    color: #000;
+}
+
+.item_detail{
+    margin-bottom: 10rpx;
+    color: #000;
+}
+
+.topImg{
+    position: fixed;
+    bottom: 100rpx;
+    right: 50rpx;
+    width: 100rpx;
+}

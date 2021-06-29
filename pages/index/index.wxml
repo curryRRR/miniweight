@@ -1,0 +1,70 @@
+<!--pages/index/index.wxml-->
+
+<!-- 搜索框组件 -->
+<search></search>
+
+<!-- 首页登录 -->
+<view class="login_warp">
+    <view wx:if="{{!userInfo.nickName}}" bindtap="handleLogin">立即登录</view>
+    <view wx:else>欢迎您 : {{userInfo.nickName}}</view>
+</view>
+
+
+<!-- 分类查看统计 -->
+<view class="count_warp">
+    <view class="count_item" bindtap="handleGoodsInfo">
+        <image class="count_img" mode="widthFix" src="/images/count.png"></image>
+        <view class="count_name">货品统计</view>
+    </view>
+    <view class="count_item" bindtap="handleCarInfo">
+        <image class="count_img" mode="widthFix" src="/images/count2.png"></image>
+        <view class="count_name">车辆统计</view>
+    </view>
+    <view class="count_item" bindtap="handleWeighTypeInfo">
+        <image class="count_img" mode="widthFix" src="/images/count3.png"></image>
+        <view class="count_name">过磅类型</view>
+    </view>
+    <view class="count_item" bindtap="handleCompanyInfo">
+        <image class="count_img" mode="widthFix" src="/images/count4.png"></image>
+        <view class="count_name">单位统计</view>
+    </view>
+</view>
+
+<!-- 当日过磅信息 -->
+<view class="day_warp">
+    <view class="day_title">今日</view>
+    <view class="day_info_warp">
+        <view class="day_info">
+            <view>过磅数(车)</view>
+            <view class="num"><text wx:if="{{dayInfo.totalCount}}">{{dayInfo.totalCount}}</text> <text wx:else>0</text></view>
+        </view>
+        <view class="day_info">
+            <view>总实重(吨)</view>
+            <view class="num"><text wx:if="{{dayInfo.totalWeight}}">{{dayInfo.totalWeight}}</text> <text wx:else>0</text></view>
+        </view>
+        <view class="day_info">
+            <view>实收金额(元)</view>
+            <view class="num"><text wx:if="{{dayInfo.totalPrice}}">{{dayInfo.totalPrice}}</text> <text wx:else>0</text></view>
+        </view>
+    </view>
+</view>
+
+<!-- 当月过磅信息 -->
+<view class="month_warp">
+    <view class="month_title">今月</view>
+    <view class="month_info_warp">
+        <view class="month_info">
+            <view>过磅数(车)</view>
+            <view class="num"><text wx:if="{{monthInfo.totalCount}}">{{monthInfo.totalCount}}</text> <text wx:else>0</text></view>
+        </view>
+        <view class="month_info">
+            <view>总实重(吨)</view>
+            <view class="num"><text wx:if="{{monthInfo.totalWeight}}">{{monthInfo.totalWeight}}</text> <text wx:else>0</text></view>
+        </view>
+        <view class="month_info">
+            <view>实收金额(元)</view>
+            <view class="num"><text wx:if="{{monthInfo.totalPrice}}">{{monthInfo.totalPrice}}</text> <text wx:else>0</text></view>
+        </view>
+    </view>
+</view>
+<input hidden="true" name="action" value="returnPerson" />

@@ -1,0 +1,43 @@
+/* pages/user/user.wxss */
+page{
+    background-color: #efefef;
+}
+.station_info{
+    padding-left: 20rpx;
+    border-left: 15rpx solid orangered;
+    margin-top: 50rpx;
+    font-weight: bold;
+}
+
+
+.setting_menu{
+    width: 95%;
+    margin: 0rpx auto;
+    font-size: 30rpx;
+    color: black;
+}
+
+.setting_menu .setting_item{
+    height: 100rpx;
+    padding: 0 30rpx;
+    line-height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    margin: 5rpx auto;
+    border-radius: 10rpx;
+}
+
+.setting_menu .setting_item image{
+    width: 30rpx;
+    /* text-align: center; */
+}
+
+.QRcode{
+    width: 400rpx;
+    height: 400rpx;
+    background-color:rgba(11, 85 ,98 , 0.5);
+    position: fixed;
+    left: 100rpx;
+    top: 300rpx;
+}

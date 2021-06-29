@@ -1,0 +1,59 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/search/search",
+        "pages/station/station",
+        "pages/user/user",
+        "pages/login/login",
+        "pages/statistics_pages/car_Statistics/index",
+        "pages/statistics_pages/company_Statistics/index",
+        "pages/statistics_pages/goods_Statistics/index",
+        "pages/statistics_pages/weigh_Type/index",
+        "pages/search/detail/detail",
+        "pages/select/select"
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#1296db",
+        "navigationBarTitleText": "weight",
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh": true,
+        "backgroundColor": "#eceae8"
+    },
+    "tabBar": {
+        "color": "#999",
+        "backgroundColor": "#fafafa",
+        "selectedColor": "#1296db",
+        "position": "bottom",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "/images/index0.png",
+                "selectedIconPath": "/images/index1.png"
+            },
+            {
+                "pagePath": "pages/search/search",
+                "text": "查询",
+                "iconPath": "/images/zoom0.png",
+                "selectedIconPath": "/images/zoom1.png"
+            },
+            {
+                "pagePath": "pages/station/station",
+                "text": "站点",
+                "iconPath": "/images/station0.png",
+                "selectedIconPath": "/images/station1.png"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "text": "个人中心",
+                "iconPath": "/images/my0.png",
+                "selectedIconPath": "/images/my1.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

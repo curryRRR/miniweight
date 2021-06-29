@@ -1,0 +1,122 @@
+/* pages/index/index.wxss */
+page{
+    background-color: #efefef;
+}
+
+.login_warp{
+    padding-top: 20rpx;
+    height: 90rpx;
+    text-align: center;
+    color: white;
+    background-color: var(--themeColor);
+}
+
+
+
+
+.count_warp{
+    width: 100%;
+    display: flex;
+    padding-top: 10rpx;
+}
+
+.count_item{
+    display: flex;
+    flex: 1;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.count_item image{
+    width: 60%;
+}
+
+.count_item .count_name{
+    font-size: 24rpx;
+    color:#000;
+}
+
+
+/* 今日过磅信息样式 */
+.day_warp{
+    width: 95%;
+    height: 250rpx;
+    background-color: #fff;
+    margin: 30rpx auto;
+}
+
+.day_warp .day_title{
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 40rpx;
+    padding-left: 10rpx;
+    color: var(--themeColor);
+    border-left: 10rpx solid var(--themeColor);
+
+}
+
+.day_warp .day_info_warp{
+    display: flex;
+    text-align: center;
+    margin-top: 20rpx;
+    font-size: 28rpx;
+    color: #666;
+    height: 120rpx;
+}
+
+.day_info{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.day_info .num{
+    color: #000;
+    font-size: 30rpx;
+}
+
+
+/* 本月过磅信息样式 */
+.month_warp{
+    width: 95%;
+    height: 250rpx;
+    background-color: #fff;
+    margin: 30rpx auto;
+}
+
+.month_warp .month_title{
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 40rpx;
+    padding-left: 10rpx;
+    color: var(--themeColor);
+    border-left: 10rpx solid var(--themeColor);
+
+}
+
+.month_warp .month_info_warp{
+    display: flex;
+    text-align: center;
+    margin-top: 20rpx;
+    font-size: 28rpx;
+    color: #666;
+    height: 120rpx;
+}
+
+.month_info{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.month_info .num{
+    color: #000;
+    font-size: 30rpx;
+}
+

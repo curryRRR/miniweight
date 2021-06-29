@@ -1,0 +1,20 @@
+<!--pages/statistics_pages/goods_Statistics/index.wxml-->
+<view class="table">
+ <view class="tr bg-w">
+ <view class="th">公司编号</view>
+ <view class="th">公司名称</view>
+ <view class="th ">联系电话</view>
+ </view>
+ <block wx:for="{{listData}}" wx:key="id">
+ <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+ <view class="td">{{item.unitId}}</view>
+ <view class="td"><text selectable="true">{{item.unitName}}</text></view>
+ <view class="td" style="color:#1296db" bindtap="callPhone" data-tel="{{item.unitTel}}">{{item.unitTel}}</view>
+ </view>
+ <view class="tr" wx:else>
+ <view class="td">{{item.unitId}}</view>
+ <view class="td"><text selectable="true">{{item.unitName}}</text></view>
+ <view class="td" style="color:#1296db" bindtap="callPhone" data-tel="{{item.unitTel}}">{{item.unitTel}}</view>
+ </view>
+ </block>
+</view>
