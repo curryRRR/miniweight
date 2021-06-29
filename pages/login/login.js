@@ -15,6 +15,7 @@ Page({
         success:(res)=>{
           console.log(res);
           wx.setStorageSync('userInfo', res.userInfo);//将用户信息写入缓存
+          getApp().globalData.userInfo = res.userInfo; //将用户信息存放到全局
           getApp().globalData.version = "2.0.1";//将用户信息写入到公共数据
           console.log(getApp().globalData);
           wx.navigateBack({

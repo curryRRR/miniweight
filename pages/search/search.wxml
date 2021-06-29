@@ -15,7 +15,7 @@
     </view>
 
     <!-- TODO:显示查询数据的结果，如果没有符合的数据则显示无数据，(默认显示该站点的所有数据) -->
-    <view class="data_info">
+    <view class="data_info" wx:if="{{loginStatus}}">
         <!-- <image mode="widthFix" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F01%2F51%2F01%2F685745729dd5300.jpg&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1618391714&t=87c5c029e0bc40793c3a115b68c0330d"></image> -->
         <!-- 显示数据项 -->
         <navigator class="info_item" url="/pages/search/detail/detail?goodId={{item.weightId}}"
@@ -30,6 +30,11 @@
             </view>
             <view class="item_detail">点击查看详情</view>
         </navigator>
+    </view>
+    <view class="data_info" wx:else>
+        <view class="notLogin">
+            请先登录，即可查看数据。
+        </view>
     </view>
     <!-- TODO 2021/5/19 18:00 实现固定按钮，实现回到顶部的功能 -->
     <image class="topImg" mode="widthFix" hidden="{{isScroll}}" bindtap="goTop" src="../../images/top.png"></image>

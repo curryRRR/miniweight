@@ -62,3 +62,10 @@ page{
     right: 50rpx;
     width: 100rpx;
 }
+
+.notLogin{
+    font-size: 30rpx;
+    color: #555;
+    text-align: center;
+    margin-top: 30rpx;
+}

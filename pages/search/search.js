@@ -1,11 +1,14 @@
 import { request } from "../request/index.js";
 // pages/search/search.js
+var app = getApp();
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
+        loginStatus:false, //登录状态
+        userInfo:{}, //用户信息
         weightInfo:[], //获取到的称重信息
         inter:"", //定时任务标识
         isScroll:true,//是否滚动标识
@@ -62,8 +65,25 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.getWeightInfo();
-        console.log(getApp().globalData.version);  //使用获取到globalData的值
+        //用户已登录才显示数据
+        var that = this;
+        //let user = app.globalData.userInfo; //使用全局变量的方式
+        let user = wx.getStorageSync('userInfo');
+        that.setData({
+            userInfo:user
+        })
+        var arr = JSON.stringify(user);
+        if(arr == "{}"){
+            wx.showToast({
+              title: '请先登录',
+            })
+        }else{
+            //如果页面加载时已经登录，就修改用户登录状态，并获取数据
+            this.setData({
+                loginStatus:true
+            })
+            that.getWeightInfo();
+        }
     },
 
     /**
@@ -77,8 +97,28 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        //页面显示时开启定时任务
-        this.startTimer();
+        var that = this;
+        //let user = app.globalData.userInfo; //使用全局变量的方式
+        let user = wx.getStorageSync('userInfo');
+        that.setData({
+            userInfo:user
+        })
+        var arr = JSON.stringify(user);
+        if(arr == "{}"){
+            wx.showToast({
+              title: '请先登录',
+            })
+        }else{
+            //如果登录状态为false，则刷新状态，并请求数据
+            if(!that.data.loginStatus){
+                that.setData({
+                    loginStatus:true
+                })
+                that.getWeightInfo();
+            }
+        }
+        //如果用户登录了才开启定时任务
+        // this.startTimer();
     },
 
     /**
@@ -86,7 +126,7 @@ Page({
      */
     onHide: function () {
         //页面隐藏时关闭定时任务
-        this.endTimer()
+        // this.endTimer()
     },
 
     /**

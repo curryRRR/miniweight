@@ -34,9 +34,10 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        const userInfo = wx.getStorageSync('userInfo');
+        //let user = app.globalData.userInfo; //使用全局变量的方式
+        let user = wx.getStorageSync('userInfo');
         this.setData({
-            userInfo
+            userInfo:user
         })
     },
 

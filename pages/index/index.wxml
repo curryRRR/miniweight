@@ -30,6 +30,8 @@
     </view>
 </view>
 
+<!-- 实时信息统计(用户登录时) -->
+<view wx:if="{{userInfo.nickName}}">
 <!-- 当日过磅信息 -->
 <view class="day_warp">
     <view class="day_title">今日</view>
@@ -48,7 +50,6 @@
         </view>
     </view>
 </view>
-
 <!-- 当月过磅信息 -->
 <view class="month_warp">
     <view class="month_title">今月</view>
@@ -67,4 +68,49 @@
         </view>
     </view>
 </view>
+
+</view>
+
+<!-- 未登录时 -->
+<view wx:else>
+<!-- 当日过磅信息 -->
+<view class="day_warp">
+    <view class="day_title">今日</view>
+    <view class="day_info_warp">
+        <view class="day_info">
+            <view>过磅数(车)</view>
+            <view class="num">0</view>
+        </view>
+        <view class="day_info">
+            <view>总实重(吨)</view>
+            <view class="num">0</view>
+        </view>
+        <view class="day_info">
+            <view>实收金额(元)</view>
+            <view class="num">0</view>    
+        </view>
+    </view>
+</view>
+<!-- 当月过磅信息 -->
+<view class="month_warp">
+    <view class="month_title">今月</view>
+    <view class="month_info_warp">
+        <view class="month_info">
+            <view>过磅数(车)</view>
+            <view class="num">0</view>
+        </view>
+        <view class="month_info">
+            <view>总实重(吨)</view>
+            <view class="num">0</view>
+        </view>
+        <view class="month_info">
+            <view>实收金额(元)</view>
+            <view class="num">0</view>
+        </view>
+    </view>
+</view>
+
+</view>
+
+
 <input hidden="true" name="action" value="returnPerson" />
